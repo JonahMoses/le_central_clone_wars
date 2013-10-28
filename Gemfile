@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in le_central_clone_wars.gemspec
-gemspec
+gem 'sinatra', require: 'sinatra/base'
+gem 'sinatra-contrib', require: 'sinatra/reloader'
+gem 'pry'
+gem 'rack-test'
