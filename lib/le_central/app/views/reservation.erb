@@ -16,8 +16,35 @@
   <div class="slider-pattern"></div>
   <img src="/images/bgheader/bg-header1.jpg" alt="" />
 </div>
-
 </header>
 </div>
 <!-- END HEADER -->
-Reservations
+
+<center><h1>Reservations</h1></center>
+
+      <section id="maincontent" class="eight columns positionleft">
+        <div class="padcontent">
+          <section class="content">
+            <div id="contactform">
+              <form action="/reservation" method= "POST" role= "form">
+                <fieldset>
+                 <!--  <span class="error" id="name_error">Please enter name !</span>
+                  <span class="error" id="email_error">Please enter phone address !</span>
+                  <span class="error" id="email_error2">Please enter valid phone address !</span>
+                  <span class="error" id="msg_error">Please enter message !</span> -->
+                  <label for="name" id="name_label">Your Name:</label>
+                  <input type="text" name="reservation[name]" id="name" size="100" value="" class="text-input" />
+                  <label for="phone" id="email_label">Your Phone Number:</label>
+                  <input type="text" name="reservation[phone]" id="phone" size="100" value="" class="text-input" />
+                  <label for="time" id="reservation_time">Reservation Time:</label>
+                  <input type="text" name="reservation[time]" id="time" size="100"  value="" class="text-input" />
+                  <label for="guests" id="number_of_guests">Number Of Guests:</label>
+                  <input type="text" name="reservation[guests]" id="guests" size="100"  value="" class="text-input" />
+                  <br />
+                  <input type="submit" name="submit" class="button" id="submit_btn" value="Send Message"/>
+                </fieldset>
+              </form>
+            </div>
+          </section>
+        </div>
+      </section><!-- end contactform -->
