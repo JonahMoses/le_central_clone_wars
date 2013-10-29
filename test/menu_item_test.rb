@@ -11,15 +11,15 @@ class MenuItemTest < Minitest::Test
 
   def test_it_creates_menu_items
     test_item = {
-      :id => 1,
-      :active => 1,
-      :meal => "Dinner",
-      :course => "Appetizer",
-      :name => "Frog Legz",
-      :description => "Cooked in lots and lots of butter.",
-      :price => "9",
-      :created_at => DateTime.now,
-      :update_at => DateTime.now
+      :active       => 1,
+      :meal         => "Dinner",
+      :course       => "Appetizer",
+      :menu_order   => 10,
+      :name         => "Frog Legz",
+      :description  => "Cooked in lots and lots of butter.",
+      :price        => "9",
+      :created_at   => DateTime.now,
+      :updated_at    => DateTime.now
       }
     frog_legz = LeCentral::MenuItem.new(test_item)
     assert_equal "9", frog_legz.price

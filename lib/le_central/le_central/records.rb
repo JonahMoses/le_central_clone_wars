@@ -1,14 +1,16 @@
 require 'bundler'
-require 'sequel'
-
 Bundler.require
 
 module LeCentral
 
-  class Database
+  class Records
 
     def self.database
-      @database ||= Sequel.sqlite('lib/le_central/db/database.sqlite3')
+      # if ENV['RACK_ENV'] == 'test'
+        @database ||= Sequel.sqlite('lib/le_central/db/test_database.sqlite3')
+      # else
+        # @database ||= Sequel.sqlite('lib/le_central/db/database.sqlite3')
+      # end
     end
 
     def self.create_menu_items_table
@@ -17,6 +19,7 @@ module LeCentral
         Integer     :active
         String      :meal,        :size => 10
         String      :course,      :size => 30
+        Integer     :meal_order
         String      :name,        :size => 50
         String      :description, :size => 200
         String      :price,       :size => 20
