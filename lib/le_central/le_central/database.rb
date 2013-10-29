@@ -1,6 +1,4 @@
 require 'bundler'
-require 'sequel'
-
 Bundler.require
 
 module LeCentral

@@ -20,4 +20,22 @@
 </header>
 </div>
 <!-- END HEADER -->
-MENU
+<div id="outermain">
+  <div class="container">
+    <div class="row">
+      <!-- <section id="maincontent" class="eight columns positionleft"> -->
+      <div class="padcontent">
+        <section class="content">
+            <% meal.each do |key, items_array| %>
+              <h3><%= key %></h3>
+              <% items_array.each do |item| %>
+              <%= item %>
+
+              <% end %>
+            <% end %>
+         </section>
+      </div>
+      <!-- </section> -->
+    </div>
+  </div>
+</div>
