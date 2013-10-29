@@ -8,7 +8,7 @@ module LeCentral
   class Database
 
     def self.database
-      @database ||= Sequel.sqlite('database.sqlite3')
+      @database ||= Sequel.sqlite('lib/le_central/db/database.sqlite3')
     end
 
     def self.create_menu_items_table
