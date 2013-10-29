@@ -34,7 +34,7 @@ module LeCentral
     post '/contact' do
       # contact = Contact.new(name: params['name'], email: params['email'], subject: params['subject'], message: params['message'])
       Contact.new(params[:contact]).email
-      
+
       # erb :email, locals: {contact: contact}
       # redirect '/'
     end
