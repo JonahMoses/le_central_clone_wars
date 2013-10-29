@@ -39,9 +39,31 @@
 <link rel="shortcut icon" href="/images/favicon.ico" />
 </head>
 <body class="home">
+  <!-- HEADER -->
+  <div id="outerheader">
+    <header>
+      <!-- LOGO -->
+      <div id="logo">
+        <a href="/index.html"><img src="/images/logo.png" alt=""/></a>
+      </div>
+      <!-- END LOGO -->
 
+      <!-- navigation -->
+      <%= erb :navigation %>
+      <!-- END navigation -->
+
+    </header>
+  </div>
+  <!-- END HEADER -->
+<div id="bodychild">
+<div id="outercontainer">
 <%= yield %>
 
+<!-- FOOTER -->
+<%= erb :footer %>
+<!-- END FOOTER -->
+</div><!-- end outercontainer -->
+</div><!-- end bodychild -->
 <!-- ////////////////////////////////// -->
 <!-- //      Javascript Files        // -->
 <!-- ////////////////////////////////// -->

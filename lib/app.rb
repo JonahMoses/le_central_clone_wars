@@ -13,6 +13,10 @@ module LeCentral
       erb :about
     end
 
+    get '/contact' do
+      erb :contact
+    end
+
   end
 end
 
