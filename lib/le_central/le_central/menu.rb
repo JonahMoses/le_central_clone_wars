@@ -20,7 +20,7 @@ module LeCentral
       end
 
       def create(menu_item)
-        return if menu_item[:name].empty?
+        return if menu_item[:name].nil?
         menu_item[:created_at] = DateTime.now
         Records.database.transaction  do
           Records.database[:menu_items] << menu_item
