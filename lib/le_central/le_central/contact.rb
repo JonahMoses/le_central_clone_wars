@@ -28,7 +28,6 @@ module LeCentral
           :domain               => "localhost.localdomain" # the HELO domain provided by the client to the server
         }
       })
-
     end
 
   end

@@ -28,7 +28,5 @@ module LeCentral
       end
 
     end
-
   end
-
 end

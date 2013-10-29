@@ -19,5 +19,6 @@ module LeCentral
       @created_at = menu_item_hash[:created_at]
       @updated_at = menu_item_hash[:updated_at]
     end
+
   end
 end

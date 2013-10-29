@@ -6,11 +6,11 @@ module LeCentral
   class Records
 
     def self.database
-      # if ENV['RACK_ENV'] == 'test'
+      if ENV['RACK_ENV'] == 'test'
         @database ||= Sequel.sqlite('lib/le_central/db/test_database.sqlite3')
-      # else
-        # @database ||= Sequel.sqlite('lib/le_central/db/database.sqlite3')
-      # end
+      else
+        @database ||= Sequel.sqlite('lib/le_central/db/database.sqlite3')
+      end
     end
 
     def self.create_menu_items_table
@@ -38,5 +38,4 @@ module LeCentral
     end
 
   end
-
 end
