@@ -1,10 +1,7 @@
 require 'sinatra/base'
 require './lib/le_central/le_central/contact'
-<<<<<<< HEAD
 require './lib/le_central/le_central/reservation'
-=======
 require './lib/le_central/le_central/menu'
->>>>>>> 6d509919af03c31f58d75095e1bc2e2c45c8bac2
 
 module LeCentral
   class Controller < Sinatra::Base
