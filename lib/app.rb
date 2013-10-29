@@ -1,5 +1,20 @@
-require "le_central_clone_wars/version"
+require 'sinatra/base'
 
-module LeCentralCloneWars
-  # Your code goes here...
+module LeCentral
+  class Controller < Sinatra::Base
+    # set :method_override, true
+    set :root, 'lib/le_central/app'
+
+    get '/' do
+      erb :index
+    end
+
+    get '/about' do
+      erb :about
+    end
+
+  end
 end
+
+
+

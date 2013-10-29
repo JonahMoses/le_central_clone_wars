@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'le_central_clone_wars/version'
+require 'le_central/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "le_central_clone_wars"
-  spec.version       = LeCentralCloneWars::VERSION
+  spec.name          = "le_central"
+  spec.version       = LeCentral::VERSION
   spec.authors       = ["Jonah"]
   spec.email         = ["Jonahkmoses@gmail.com"]
   spec.description   = %q{TODO: Write a gem description}
