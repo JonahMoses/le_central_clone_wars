@@ -26,8 +26,13 @@
       <!-- <section id="maincontent" class="eight columns positionleft"> -->
       <div class="padcontent">
         <section class="content">
-          <% meal.each do |meal|  %>
-            <%= meal %>
+          <% meal.each do |course, items|  %>
+            <div>
+              <h2><%= course %></h2>
+              <% items.each do |item| %>
+                  <p><h4><%= item[:name] %></h4> <%= item[:description] %> <%= item[:price] %></p>
+              <% end %>
+            </div>
           <% end %>
         </section>
       </div>
