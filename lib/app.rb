@@ -17,6 +17,9 @@ module LeCentral
       erb :contact
     end
 
+    get '/gallery' do
+      erb :gallery
+    end
   end
 end
 
