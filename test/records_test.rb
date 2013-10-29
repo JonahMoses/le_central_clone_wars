@@ -3,22 +3,22 @@ gem 'minitest'
 
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/le_central/le_central/database'
+require './lib/le_central/le_central/records'
 require 'rack/test'
 
-class DatabaseTest < Minitest::Test
+class RecordsTest < Minitest::Test
   include Rack::Test::Methods
 
   def setup
-    @db = LeCentral::Database
+    @records = LeCentral::Records
   end
 
   def test_database_exists
-    assert @db.database
+    assert @records.database
   end
 
   def test_it_creates_menu_items_table
-    @db.menu_items_table.insert(
+    @records.menu_items_table.insert(
       :active => 1,
       :meal => "Dinner",
       :course => "Appetizer",
@@ -27,10 +27,10 @@ class DatabaseTest < Minitest::Test
       :price => "9",
       :created_at => DateTime.now
       )
-    assert_equal "9", @db.menu_items_table.where(:name => "Frog Legz").get(:price)
+    assert_equal "9", @records.menu_items_table.where(:name => "Frog Legz").get(:price)
   end
 
   def teardown
-    @db.menu_items_table.where(:name => "Frog Legz").delete
+    @records.menu_items_table.where(:name => "Frog Legz").delete
   end
 end
