@@ -38,20 +38,20 @@
             </div>
             <div class="separator"></div>
             <div id="contactform">
-              <form id="contact" action="#">
+              <form action="/contact" method= "POST" role= "form">
                 <fieldset>
                  <!--  <span class="error" id="name_error">Please enter name !</span>
                   <span class="error" id="email_error">Please enter email address !</span>
                   <span class="error" id="email_error2">Please enter valid email address !</span>
                   <span class="error" id="msg_error">Please enter message !</span> -->
                   <label for="name" id="name_label">Your Name:</label>
-                  <input type="text" name="name" id="name" size="50" value="" class="text-input" />
+                  <input type="text" name="contact[name]" id="name" size="100" value="" class="text-input" />
                   <label for="email" id="email_label">Your Email:</label>
-                  <input type="text" name="email" id="email" size="50" value="" class="text-input" />
+                  <input type="text" name="contact[email]" id="email" size="100" value="" class="text-input" />
                   <label for="subject" id="subject_label">Subject:</label>
-                  <input type="text" name="subject" id="subject" size="50"  value="" class="text-input" />
+                  <input type="text" name="contact[subject]" id="subject" size="100"  value="" class="text-input" />
                   <label for="msg" id="msg_label">Message:</label>
-                  <textarea rows="10" name="msg" id="msg" class="text-input"></textarea>
+                  <textarea rows="10" name="contact[message]" id="msg" class="text-input"></textarea>
                   <br />
                   <input type="submit" name="submit" class="button" id="submit_btn" value="Send Message"/>
                 </fieldset>

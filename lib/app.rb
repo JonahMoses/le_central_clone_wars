@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require './lib/le_central/le_central/contact'
 
 module LeCentral
   class Controller < Sinatra::Base
@@ -29,6 +30,15 @@ module LeCentral
       meal_items = Menu.items(meal)
       erb :menu, locals: {meal: meal_items}
     end
+
+    post '/contact' do
+      # contact = Contact.new(name: params['name'], email: params['email'], subject: params['subject'], message: params['message'])
+      Contact.new(params[:contact]).email
+      
+      # erb :email, locals: {contact: contact}
+      # redirect '/'
+    end
+
 
   end
 end
