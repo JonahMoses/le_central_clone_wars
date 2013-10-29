@@ -55,13 +55,13 @@ class MenuTest < Minitest::Test
   def test_it_can_return_all_items
     LeCentral::Menu.create(@steak)
     LeCentral::Menu.create(@filet)
-    assert_equal 2, LeCentral::Menu.all_items.count
+    assert_equal 3, LeCentral::Menu.all_items.count
   end
 
   def test_it_can_find_items_by_meal
     LeCentral::Menu.create(@steak)
     LeCentral::Menu.create(@filet)
-    assert_equal 1, LeCentral::Menu.find_items_by("Dinner").count
+    assert_equal 2, LeCentral::Menu.find_items_by("Dinner").count
   end
 
   def test_it_can_group_items_by_course_for_meal
