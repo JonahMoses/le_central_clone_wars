@@ -36,6 +36,10 @@ module LeCentral
       Contact.new(params[:contact]).email
     end
 
+    get '/admin' do
+      erb :admin, locals: {all_items: LeCentral::Menu.all_items}
+    end
+
   end
 end
 

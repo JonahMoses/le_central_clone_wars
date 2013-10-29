@@ -5,7 +5,7 @@
       <div class="row">
         <div class="twelve columns">
           <div class="pagetitle">
-            <h1>Menu</h1>
+            <h1>Admin Dashboard</h1>
             <div class="pagedesc"></div>
           </div>
         </div>
@@ -20,18 +20,8 @@
 </header>
 </div>
 <!-- END HEADER -->
-<div id="outermain">
-  <div class="container">
-    <div class="row">
-      <!-- <section id="maincontent" class="eight columns positionleft"> -->
-      <div class="padcontent">
-        <section class="content">
-          <% meal.each do |meal|  %>
-            <%= meal %>
-          <% end %>
-        </section>
-      </div>
-      <!-- </section> -->
-    </div>
-  </div>
-</div>
+<% all_items.each do |item| %>
+
+  <p><%= item %></p>
+
+<% end %>
