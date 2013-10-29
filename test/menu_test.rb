@@ -12,7 +12,6 @@ class MenuTest < Minitest::Test
 
   def setup
     @filet = {
-      # :id           => 1,
       :active       => 1,
       :meal         => "Brunch",
       :course       => "Les Poissons",

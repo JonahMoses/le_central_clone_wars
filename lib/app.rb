@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require './lib/le_central/le_central/contact'
+require './lib/le_central/le_central/menu'
 
 module LeCentral
   class Controller < Sinatra::Base
@@ -27,35 +28,8 @@ module LeCentral
     end
 
     get '/menu/:meal' do |meal|
-      meal_items_hash =
-        {"Les Soupes" => [{
-          :id => 1,
-          :meal => "Dinner",
-          :course => "Les Soupes",
-          :name => "Soupe De Jour",
-          :description => "Cup or Bowl",
-          :price => "$2 / $3",
-          :active => 1},
-          {:id => 2,
-          :meal => "Dinner",
-          :course => "Les Soupes",
-          :name => "Soupe a l'Oignon",
-          :description => "Cup or Bowl",
-          :price => "$3 / $4",
-          :active => 1
-          }],
-        "Les Moules En Frites" => [{
-          :id => 1,
-          :meal => "Dinner",
-          :course => "Les Moules En Frites",
-          :name => "Les Moules En Frites",
-          :description => "All mussels are steamed with white",
-          :price => "$11.95",
-          :active => 1
-          }]
-        }
-      # Menu.menu_items_group_by(meal)
-      erb :menu, locals: {meal: meal_items_hash}
+      meal_items = LeCentral::Menu.group_items_by_course_for(meal)
+      erb :menu, locals: {meal: meal_items}
     end
 
     post '/contact' do

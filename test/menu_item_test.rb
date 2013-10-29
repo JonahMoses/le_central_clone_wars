@@ -11,7 +11,6 @@ class MenuItemTest < Minitest::Test
 
   def test_it_creates_menu_items
     test_item = {
-      :id           => 1,
       :active       => 1,
       :meal         => "Dinner",
       :course       => "Appetizer",
