@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require './lib/le_central/le_central/contact'
+require './lib/le_central/le_central/reservation'
 
 module LeCentral
   class Controller < Sinatra::Base
@@ -32,13 +33,14 @@ module LeCentral
     end
 
     post '/contact' do
-      # contact = Contact.new(name: params['name'], email: params['email'], subject: params['subject'], message: params['message'])
-      Contact.new(params[:contact]).email
-      
-      # erb :email, locals: {contact: contact}
-      # redirect '/'
+      LeCentral::Contact.new(params[:contact]).send_email
+      redirect '/'
     end
 
+    post '/reservation' do
+      LeCentral::Reservation.new(params[:reservation]).send_email
+      redirect '/'
+    end
 
   end
 end

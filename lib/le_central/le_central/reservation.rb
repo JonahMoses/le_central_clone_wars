@@ -2,21 +2,21 @@ require 'erb'
 require 'pony'
 
 module LeCentral
-  class Contact
-    attr_reader :name, :email, :subject, :message
+  class Reservation
+    attr_reader :res_name, :res_phone, :res_time, :res_guests
 
-    def initialize(form)
-      @name = form[:name]
-      @email = form[:email]
-      @subject = form[:subject]
-      @message = form[:message]
+    def initialize(reservation)
+      @res_name = reservation[:name]
+      @res_phone = reservation[:phone]
+      @res_time = reservation[:time]
+      @res_guests = reservation[:guests]
     end
 
     def send_email
       Pony.mail({
         :to => 'kevin.m.powell04@gmail.com',
-        :subject => "Contact Email From Website",
-        :body => "Name: #{@name}, Email: #{@email},\n Subject: #{@subject},\n Message: #{@message}",
+        :subject => "Reservation Request",
+        :body => "Name: #{@res_name}, Email: #{@res_phone},\n Subject: #{@res_time},\n Message: #{@res_guests}",
         :via => :smtp,
         :via_options => {
           :address              => 'smtp.gmail.com',
