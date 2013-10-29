@@ -1,3 +1,5 @@
+require './app/le_central/menu_item'
+
 module LeCentral
 
   class Menu

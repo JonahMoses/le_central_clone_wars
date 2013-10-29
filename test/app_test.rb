@@ -17,10 +17,10 @@ class ControllerTest < Minitest::Test
     assert LeCentral::Controller
   end
 
-  def test_le_central
-    get '/'
-    assert (last_response.body =~ /Welcome To Le Central/)
-  end
+  # def test_le_central
+  #   get '/'
+  #   assert (last_response.body =~ /Welcome To Le Central/)
+  # end
 
 
 end
