@@ -1,5 +1,8 @@
 require 'bundler'
 Bundler.require
+require 'csv'
+require 'pry'
+require './lib/le_central/le_central/menu.rb'
 
 module LeCentral
 
@@ -36,6 +39,26 @@ module LeCentral
         database.from(:menu_items)
       end
     end
+
+    def self.load_csv_menu
+      menu_items_table.delete
+      menu_data.each do |row|
+        LeCentral::Menu.create({
+          :active         => row[:active],
+          :meal           => row[:meal],
+          :course         => row[:course],
+          :menu_order     => row[:menu_order],
+          :name           => row[:name],
+          :description    => row[:description],
+          :price          => row[:price]
+          })
+      end
+    end
+
+    def self.menu_data
+      CSV.read("./test/menu_data.csv", headers: true, header_converters: :symbol)
+    end
+
 
   end
 end

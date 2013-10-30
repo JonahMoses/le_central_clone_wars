@@ -1,5 +1,6 @@
 require './lib/le_central/le_central/menu_item'
 require './lib/le_central/le_central/records'
+require 'pry'
 
 module LeCentral
 
@@ -22,6 +23,7 @@ module LeCentral
       def create(menu_item)
         return if menu_item[:name].nil?
         menu_item[:created_at] = DateTime.now
+        menu_item[:updated_at] = DateTime.now
         Records.database.transaction  do
           Records.database[:menu_items] << menu_item
         end
