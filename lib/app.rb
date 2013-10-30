@@ -92,6 +92,10 @@ module LeCentral
       erb :admin, locals: {all_items: LeCentral::Menu.all_items}
     end
 
+    get '/modal' do
+      erb :modal
+    end
+
   end
 end
 

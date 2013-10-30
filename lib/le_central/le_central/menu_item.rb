@@ -12,7 +12,7 @@ module LeCentral
       @active      = menu_item_hash[:active]
       @meal        = menu_item_hash[:meal]
       @course      = menu_item_hash[:course]
-      @menu_order  = menu_item_hash[:menu_order]
+      @meal_order  = menu_item_hash[:meal_order]
       @name        = menu_item_hash[:name]
       @description = menu_item_hash[:description]
       @price       = menu_item_hash[:price]

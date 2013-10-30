@@ -47,7 +47,7 @@ module LeCentral
           :active         => row[:active],
           :meal           => row[:meal],
           :course         => row[:course],
-          :menu_order     => row[:menu_order],
+          :meal_order     => row[:meal_order],
           :name           => row[:name],
           :description    => row[:description],
           :price          => row[:price]
