@@ -25,6 +25,14 @@ module LeCentral
         Records.menu_items_table.all
       end
 
+      def meals
+        all_items.map { |i| i[:meal] }.uniq.sort
+      end
+
+      def courses
+        all_items.map { |i| i[:course] }.uniq.sort
+      end
+
       def create(menu_item)
         return if menu_item[:name].nil?
         menu_item[:created_at] = DateTime.now
