@@ -42,29 +42,30 @@
     <% all_items.each do |item| %>
 
       <form action="/update_database" method="POST">
+        <input type="hidden" name="_method" value="PUT"/>
         <fieldset>
         <tr>
           <td>
-            <% item[:active] %>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="active">
+            <% item[:active] %>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name= "menu_item[active]"/>
           </td>
           <td>
             <select>
               <% menu.meals.each do |meal| %>
-                <option <% if item[:meal] == meal %> selected <% end %> value="meal"><%= meal %></option>
+                <option <% if item[:meal] == meal %> selected <% end %> name="menu_item[course]" value="meal"><%= meal %></option>
               <% end %>
             </select>
           </td>
           <td>
             <select>
               <% menu.courses.each do |course| %>
-                <option <% if item[:course] == course %> selected <% end %> value="course"><%= course %></option>
+                <option <% if item[:course] == course %> selected <% end %> name="menu_item[course]" value="course"><%= course %></option>
               <% end %>
             </select>
           </td>
-          <td><%= item[:meal_order] %></td>
-          <td><input type="text" name="name" value="<%= item[:name] %>"></td>
-          <td><input type="text" name="name" value="<%= item[:description] %>"></td>
-          <td><input type="text" name="name" value="<%= item[:price] %>"></td>
+          <td><input type="text" name="menu_item[meal_order]" value="<%= item[:meal_order] %>"></td>
+          <td><input type="text" name="menu_item[name]" value="<%= item[:name] %>"></td>
+          <td><input type="text" name="menu_item[description]" value="<%= item[:description] %>"></td>
+          <td><input type="text" name="menu_item[price]" value="<%= item[:price] %>"></td>
           <td><%= item[:created_at].strftime("%-m/%e/%y") %></td>
           <td><%= item[:updated_at].strftime("%-m/%e/%y") %></td>
         </tr>

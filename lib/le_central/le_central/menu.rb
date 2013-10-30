@@ -42,6 +42,14 @@ module LeCentral
         end
       end
 
+      def find
+      end
+
+      def update(data)
+        
+
+      end
+
     end
   end
 end

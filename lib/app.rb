@@ -93,6 +93,12 @@ module LeCentral
       erb :admin, locals: {all_items: LeCentral::Menu.all_items, menu: LeCentral::Menu}
     end
 
+    put '/update_database' do
+      binding.pry
+      LeCentral::Menu.update(params[:menu_item])
+      redirect '/admin'
+    end
+
   end
 end
 
