@@ -9,11 +9,16 @@ module LeCentral
     class << self
 
       def group_items_by_course_for(meal)
-        find_items_by(meal).group_by { |mi| mi[:course] }
+        sorted_meals = meal.sort_by { |mi| mi[:meal_order] }
+        find_items_by(sorted_meals).group_by { |mi| mi[:course] }
       end
 
       def find_items_by(meal)
-        all_items.find_all { |i| i[:meal] == meal }
+        active_items.find_all { |i| i[:meal] == meal }
+      end
+
+      def active_items
+        all_items.find_all { |i| i[:active] == 1 }
       end
 
       def all_items
