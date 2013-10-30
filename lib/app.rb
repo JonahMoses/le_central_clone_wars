@@ -19,7 +19,7 @@ module LeCentral
 
     def check_authentication
       unless current_user
-        flash[:notice] = "Login Required!"
+        flash[:notice] = "Please log in"
         redirect '/login'
       end
     end

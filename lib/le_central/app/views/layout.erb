@@ -51,16 +51,13 @@
       <!-- navigation -->
       <%= erb :navigation %>
       <!-- END navigation -->
-      <% if flash[:notice] %>
-        <p><%= flash[:notice] %></p>
-      <% end %>
     </header>
   </div>
   <!-- END HEADER -->
 <div id="bodychild">
 <div id="outercontainer">
-<%= yield %>
 
+<%= yield %>
 <!-- FOOTER -->
 <%= erb :footer %>
 <!-- END FOOTER -->
