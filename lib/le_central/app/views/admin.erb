@@ -41,7 +41,8 @@
 
     <% all_items.each do |item| %>
 
-      <form action="/">
+      <form action="/update_database" method="POST">
+        <fieldset>
         <tr>
           <td>
             <% item[:active] %>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="active">
@@ -86,6 +87,7 @@
 
   </table>
   <br />
-        <input style="width: 15%; float: right; margin-right: 2%" type="submit" name="submit" class="button" id="submit_btn" value="Save Changes"/>
+        <input style="width: 15%; float: right; margin-right: 15px" type="submit" name="submit" class="button" id="submit_btn" value="Save Changes"/>
+        </fieldset>
       </form>
 </div>
