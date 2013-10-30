@@ -1,6 +1,6 @@
 module LeCentral
   class MenuItem
-    attr_reader :menu_item_hash, :id, :active, :meal, :course, :name, :description, :price, :created_at, :updated_at
+    attr_reader :menu_item_hash, :id, :active, :meal, :course, :meal_order, :name, :description, :price, :created_at, :updated_at
 
     def initialize(menu_item_hash)
       @menu_item_hash = menu_item_hash

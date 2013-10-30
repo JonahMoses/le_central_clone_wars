@@ -1,24 +1,121 @@
-active,meal,course,meal_order,name,description,price,created_at,updated_at
-1,Brunch,Pour Commencer,10,Mimosa,By the glass / Bottomless,5 / 9,,
-1,Brunch,Pour Commencer,20,Bloody Mary with Old Bay Spice,By the glass / Bottomless,5 / 9,,
-1,Brunch,Starters,10,Soupe du Jour,Beef & Fall Vegetable,2 / 3,,
-1,Brunch,Starters,20,Soupe du Jour,Curried Sweet Potato,2 / 3,,
-1,Brunch,Starters,40,Soupe a L'Oignon,Classic French Onion Soup gratineed with Swiss cheese,3 / 4,,
-1,Brunch,Salads,10,Salade Verte,"Mixed greens tomatoes, cucumber, and carrots tossed with tarragon vinaigrette and croutons",4.50,,
-1,Brunch,Salads,20,Salade Cesar,"Romaine lettuce, parmesan cheese, and croutons tossed with a house made Caesar dressing",5,,
-1,Brunch,Les Oeufs,10,Ouefs Benedicts,"Ham, 2 poached eggs, Hollandaise sauce over toasted brioche (sub smoked salmon, add $2)",9,,
-1,Brunch,Les Oeufs,20,Gateau de Crabe Benedict,"Pan fried blue crab cakes, sauce Maltaise (orange spiked Hollandaise), 2 poached eggs over toasted brioche",13,,
-1,Dinner,Hors d'Oeuvres,10,Assiette de Fromage,"Camembert, Montrachet Chêvre, Port Salut, and Bleu Cheese served with fresh seasonal fruits, walnuts and croutons",13,,
-1,Dinner,Hors d'Oeuvres,20,Cuisses de grenouille,"Frog legs pan seared and finished in awhite wine, tomato, pastis, butter sauce",9,,
-1,Dinner,Les Soupes et Les Salades,10,Soupe du Jour,,3 / 4,,
-1,Dinner,Les Soupes et Les Salades,20,Soupe a L'Oignon,Classic French Onion Soup gratineed with Swiss cheese,3 / 4,,
-1,Dinner,Les Soupes et Les Salades,40,Salade Verte,"Mixed greens tomatoes, cucumber, and carrots tossed with tarragon vinaigrette and croutons",5,,
-1,Dinner,Les Soupes et Les Salades,50,Salade Cesar,"Romaine lettuce, parmesan cheese, and croutons tossed with a house made Caesar dressing",5,,
-1,Dinner,Les Viandes,10,Canard aux Framboises,"Roasted duck breast accentuated with a vibrant raspberry, chipotle gastrique; served with mashed potatoes and vegetables",19,,
-1,Dinner,Les Viandes,20,Carre d'Agneau,"Slowly braised lamb shank served with a natural jus, mashed potatoes and vegetables",19,,
-1,Dinner,Les Poissons,10,Lotte au Safran,"Pan seared monkfish enhanced with a saffron, tomato, fennel, roasted garlic and white bean ragout; served with oven roasted potatoes and seasonal vegetables",19,,
-1,Dinner,Les Poissons,20,Coquille St. Jacque,Seared sea scallops served a top a butternut squash risotto with leeks and finished with brown butter; served with vegetables,23,,
-1,Lunch,Les Hors d'Oeuvres,10,Soupe du Jour,Beef & Fall Vegetable,2 / 3,,
-1,Lunch,Les Hors d'Oeuvres,20,Soupe a L'Oignon,Classic French Onion Soup gratineed with Swiss cheese,3 / 4,,
-1,Lunch,Les Sandwiches,10,Croque Madame,"Open faced sandwich with country bread, ham, and Swiss cheese topped with two sunny side up eggs ",10,,
-1,Lunch,Les Sandwiches,20,Panini aux Legumes,"Roasted eggplant, sautéed mushrooms, roasted red peppers, spinach, feta cheese, with parsnip puree layered on a house made French baguette",9,,
+active,meal,course,meal_order,name,description,price
+1,Brunch,From The Griddle,10,NEW Banana Bread,Sliced banana bread with powdered sugar and served with pure maple syrup,7
+1,Brunch,From The Griddle,20,Pain Perdu Farçi,"Cinnamon battered brioche stuffed with strawberries with a touch of brandy, vanilla bean, and cream cheese with pure maple syrup",10
+1,Brunch,From The Griddle,30,Les Gauffres,"Belgium waffle, topped with Grand Marnier butter with pure maple syrup and whipped cream with your choice of strawberry compote or chocolate sauce",7
+1,Brunch,From The Griddle,40,Croque Monsieur,"Country bread, béchamel, Swiss cheese, and ham (make it a Madame with two sunny side up eggs add $1.50)",8
+1,Brunch,From The Griddle,50,Monte Cristo,"Brioche layered with ham and Swiss cheese, dipped in egg then griddle fried served with powdered sugar and raspberry coulis",9
+1,Brunch,Les Crêpes,10,Fruits de Mer,"Bay scallops, shrimp, red and white fish in a dill cream sauce gratinéed with Swiss cheese",10
+1,Brunch,Les Crêpes,20,Poulet,"Tender chicken morsels simmered in a light curry cream sauce with carrots, onions, and spinach; gratinéed with Swiss cheese",9
+1,Brunch,Les Crêpes,30,Lardons,"Grilled marinated steak, onions, mushrooms, smoked bacon in a fire roasted chipotle, mustard cream sauce gratinéed with Swiss cheese",10
+1,Brunch,Les Moules et Frites,10,Basilic,Fresh basil and diced tomatoes,11.95
+1,Brunch,Les Moules et Frites,20,Provençal,Parsley and pastis topped with breadcrumbs,11.95
+1,Brunch,Les Moules et Frites,30,Pistou,"Basil pesto, shallots, parmesan cheese",11.95
+1,Brunch,Les Moules et Frites,40,Mouclade,"Light yellow curry, white wine, shallots and a touch of cream",11.95
+1,Brunch,Les Moules et Frites,50,Normande,"Mushrooms, onions, brandy and cream",11.95
+1,Brunch,Les Moules et Frites,60,À la Moutarde,"Whole grain mustard, smoked bacon and cream",11.95
+1,Brunch,Les Moules et Frites,70,Marinière,"Parsley, shallots and garlic",11.95
+1,Brunch,Les Moules et Frites,80,Midi,"Olives, tomatoes, breadcrumbs and parmesan cheese",11.95
+1,Brunch,Les Moules et Frites,90,Safran,"Saffron, cream, onion and tomatoes",12.95
+1,Brunch,Les Moules et Frites,100,Fromage,Blue cheese and cream,11.95
+1,Brunch,Les Moules et Frites,110,Italienne (spicy),"Crushed red pepper, lemon and marinara",11.95
+1,Brunch,Les Moules et Frites,120,Portugaise,"Spanish chorizo, tomato, and a pinch of coriander",11.95
+1,Brunch,Les Oeufs,10,Ouefs Benedicts,"Ham, 2 poached eggs, Hollandaise sauce over toasted brioche (sub smoked salmon, add $2)",9
+1,Brunch,Les Oeufs,20,Gateau de Crabe Benedict,"Pan fried blue crab cakes, sauce Maltaise (orange spiked Hollandaise), 2 poached eggs over toasted brioche",13
+1,Brunch,Les Oeufs,30,Le Paysan,"Two eggs cooked your way with choice of house cured bacon, ham, or sausage patty",8
+1,Brunch,Les Oeufs,40,Steak et Oeufs,Hanger steak and two eggs cooked your way served with sauce Béarnaise,15
+1,Brunch,Les Oeufs,50,Casserole de Durango,"Slow cooked pork carnitas, poached eggs, braised peppers and onions with green chili sauce and cheddar cheese over herbed fried red potatoes",11
+1,Brunch,Les Oeufs,60,Quiche Lorraine,"Savory egg custard in a pastry crust with ham, onion and Swiss cheese",9
+1,Brunch,Les Oeufs,70,Tartine des Légumes,"Brioche topped with sliced tomatoes, mushrooms, and sautéed spinach with two poached eggs; finished with Mornay sauce",9
+1,Brunch,Les Omelettes,10,Denver Le Central Style,"House cured bacon, ham, cheddar cheese, and herb spiked, slow roasted peppers and onions",11
+1,Brunch,Les Omelettes,20,Végétarienne,"Tomatoes with roasted mushrooms, leeks, and artichoke hearts with parmesan cheese",9
+1,Brunch,Pour Commencer,10,Mimosa,By the glass / Bottomless,5 / 9
+1,Brunch,Pour Commencer,20,Bloody Mary with Old Bay Spice,By the glass / Bottomless,5 / 9
+1,Brunch,Salads,10,Salade Verte,"Mixed greens tomatoes, cucumber, and carrots tossed with tarragon vinaigrette and croutons",4.50
+1,Brunch,Salads,20,Salade Cesar,"Romaine lettuce, parmesan cheese, and croutons tossed with a house made Caesar dressing",5
+1,Brunch,Salads,30,Salade d’ Épinards,"Spinach salad tossed in a warm bacon vinaigrette and prepared with bacon, roasted red peppers, Parmesan cheese, red onions, and soft",6
+1,Brunch,Salads,40,Salade d’Onglet,"Grilled Hanger served over romaine tossed in blue cheese dressing with blue cheese crumbles, bacon, tomatoes, red onions, carrots and topped with Gaufrettes",15
+1,Brunch,Salads,50,Salade Nicoise,"Filet of tuna grilled to your liking, served over mixed greens tossed in Balsamic vinaigrette with boiled potatoes, red onion, tomatoes, haricot verts, olives, anchovies, cucumbers, roasted red peppers, and hard boiled egg",15
+1,Brunch,Starters,10,Soupe du Jour,Beef & Fall Vegetable,2 / 3
+1,Brunch,Starters,20,Soupe du Jour,Curried Sweet Potato,2 / 3
+1,Brunch,Starters,40,Soupe a L'Oignon,Classic French Onion Soup gratineed with Swiss cheese,3 / 4
+1,Brunch,Starters,50,L' Ail et Le Brie,"Warm wedge of brie, roasted head of garlic and croutons with tomatoes and basil",9
+1,Brunch,Starters,60,Charcuterie du Central,"Chef Philippe’s house made selection of pâtés and cured meats served with Dijon mustard, red onions, cornichons and croutons",11
+1,Brunch,Starters,70,Escargots Bourguignons,"Six tender escargots sautéed in sweet butter with garlic, shallots, mushrooms and parsley",7
+1,Dinner,Hors d'Oeuvres,10,Assiette de Fromage,"Camembert, Montrachet Chêvre, Port Salut, and Bleu Cheese served with fresh seasonal fruits, walnuts and croutons",13
+1,Dinner,Hors d'Oeuvres,20,Cuisses de grenouille,"Frog legs pan seared and finished in awhite wine, tomato, pastis, butter sauce",9
+1,Dinner,Hors d'Oeuvres,30,Feuilleté d’Escargots,"Six escargots prepared in a creamy sauce with blue cheese, walnuts, spinach, and tomato topped with puff pastry",9
+1,Dinner,Hors d'Oeuvres,40,Escargots Bourguignons,"Six escargots sautéed with butter, garlic, mushrooms, shallots and parsley",7
+1,Dinner,Hors d'Oeuvres,50,Petit Chêvre Fondu à la Provençale,"Goat cheese flavored with olive oil and topped with sweet balsamic onion marmalade, tomatoes, basil and breadcrumbs and baked to a golden brown",9
+1,Dinner,Hors d'Oeuvres,60,Charcuterie du Central,"House made selection of pates and cured meats served with Dijon mustard, Kalamata olives, red onions, cornichons, and croutons",11
+1,Dinner,Hors d'Oeuvres,70,"L' Ail, Le Brie, et Les Croutons","Warm wedge of brie, roasted head of garlic, tomatoes, basil and croutons",9
+1,Dinner,Les Moules et Frites,10,Basilic,Fresh basil and diced tomatoes,11.95
+1,Dinner,Les Moules et Frites,20,Provençal,Parsley and pastis topped with breadcrumbs,11.95
+1,Dinner,Les Moules et Frites,30,Pistou,"Basil pesto, shallots, parmesan cheese",11.95
+1,Dinner,Les Moules et Frites,40,Mouclade,"Light yellow curry, white wine, shallots and a touch of cream",11.95
+1,Dinner,Les Moules et Frites,50,Normande,"Mushrooms, onions, brandy and cream",11.95
+1,Dinner,Les Moules et Frites,60,À la Moutarde,"Whole grain mustard, smoked bacon and cream",11.95
+1,Dinner,Les Moules et Frites,70,Marinière,"Parsley, shallots and garlic",11.95
+1,Dinner,Les Moules et Frites,80,Midi,"Olives, tomatoes, breadcrumbs and parmesan cheese",11.95
+1,Dinner,Les Moules et Frites,90,Safran,"Saffron, cream, onion and tomatoes",12.95
+1,Dinner,Les Moules et Frites,100,Fromage,Blue cheese and cream,11.95
+1,Dinner,Les Moules et Frites,110,Italienne (spicy),"Crushed red pepper, lemon and marinara",11.95
+1,Dinner,Les Moules et Frites,120,Portugaise,"Spanish chorizo, tomato, and a pinch of coriander",11.95
+1,Dinner,Les Poissons,10,Lotte au Safran,"Pan seared monkfish enhanced with a saffron, tomato, fennel, roasted garlic and white bean ragout; served with oven roasted potatoes and seasonal vegetables",19
+1,Dinner,Les Poissons,20,Coquille St. Jacque,Seared sea scallops served a top a butternut squash risotto with leeks and finished with brown butter; served with vegetables,23
+1,Dinner,Les Poissons,30,Saumon sauce Provençale,"Pan seared filet of Atlantic salmon served with a rustic sauce of tomato, onion, garlic, capers, olives, lemon juice and olive oil; sided by rice and seasonal vegetables",17
+1,Dinner,Les Poissons,40,Sole à la Normande,"Sole in a shellfish sauce with mussels, shrimp, oysters and calvados; served with rice and vegetables",18
+1,Dinner,Les Poissons,50,Ciopinno du Central,"A classic seafood stew in a roasted tomato broth, prepared with monkfish, shrimp, squid, bay scallops, red fish, white fish, mussels, onion, and celery",21
+1,Dinner,Les Poissons,60,Le Vegetarienne,"A duo of lasagne rolls one stuffed with sundried tomato ricotta and mozzarella, and another stuffed with spinach ricotta and mozzarella, topped with marinara and parmesan cheese",15
+1,Dinner,Les Soupes et Les Salades,10,Soupe du Jour,,3 / 4
+1,Dinner,Les Soupes et Les Salades,20,Soupe a L'Oignon,Classic French Onion Soup gratineed with Swiss cheese,3 / 4
+1,Dinner,Les Soupes et Les Salades,40,Salade Verte,"Mixed greens tomatoes, cucumber, and carrots tossed with tarragon vinaigrette and croutons",5
+1,Dinner,Les Soupes et Les Salades,50,Salade Cesar,"Romaine lettuce, parmesan cheese, and croutons tossed with a house made Caesar dressing",5
+1,Dinner,Les Soupes et Les Salades,60,Salade Périgourdine,"Hazelnuts, mushrooms and country-style pate with mixed greens in a strawberry and balsamic vinaigrette",6
+1,Dinner,Les Soupes et Les Salades,70,Salade d'Epinard,"Spinach tossed in warm bacon vinaigrette with Parmesan, roasted red peppers, red onion, hard boiled egg and bacon",6
+1,Dinner,Les Soupes et Les Salades,80,Salade de Champignon,"Mixed greens, Portobello mushrooms, roasted red peppers with balsamic vinaigrette",7
+1,Dinner,Les Soupes et Les Salades,90,Salade de Betterave,Mixed greens tossed in tarragon vinaigrette served over beets with hard boiled egg and bleu cheese crumbles,8
+1,Dinner,Les Soupes et Les Salades,100,Salade Onglet *,"Grilled 5oz Hanger steak served over romaine, in blue cheese dressing with tomatoes, onions, blue cheese crumbles,bacon and cucumbers; sided by gauffrette potato chips",15
+1,Dinner,Les Soupes et Les Salades,110,Salade de Canard,"Duck leg confit served over mixed greens tossed in strawberry vinaigrette with poached pears, dried cranberries and carrots, topped with warm goat cheese crostini",17
+1,Dinner,Les Soupes et Les Salades,120,Salade Nicoise *,"Tuna grilled to your liking, served mixed greens tossed in balsamic vinaigrette with boiled potatoes, red onions, olives, tomatoes, anchovies, roasted red peppers and hard boiled egg",17
+1,Dinner,Les Viandes,10,Canard aux Framboises,"Roasted duck breast accentuated with a vibrant raspberry, chipotle gastrique; served with mashed potatoes and vegetables",19
+1,Dinner,Les Viandes,20,Carre d'Agneau,"Slowly braised lamb shank served with a natural jus, mashed potatoes and vegetables",19
+1,Dinner,Les Viandes,30,Pot au Feu,"Tender beef brisket, chicken breast, cabbage, turnips, tomatoes, onions, carrots, leeks, and celery in a natural jus; sided by sea salt, croutons, cornichons, and mustard",17
+1,Dinner,Les Viandes,40,Onglet sauce Béarnaise,10 oz Hanger steak finished with Hollandaise sauce infused with tarragon; served with house cut pommes frites and vegetables,19
+1,Dinner,Les Viandes,50,Cassoulet du Central,"White beans simmered with pork, duck confit, tomatoes, onions, and garlic; topped with mushroom, pistachio sausage",16
+1,Lunch,Hors d'Oeuvres,10,Soupe du Jour,Beef & Fall Vegetable,2 / 3
+1,Lunch,Hors d'Oeuvres,20,Soupes du Jour,Roasted Tomato Vegetable,2 / 3
+1,Lunch,Hors d'Oeuvres,30,Soupe a L'Oignon,Classic French Onion Soup gratineed with Swiss cheese,3 / 4
+1,Lunch,Hors d'Oeuvres,50,L’Ail et Le Brie,"Warm wedge of brie, roasted head of garlic, and croutons with tomatoes and basil",9
+1,Lunch,Hors d'Oeuvres,60,Charcuterie du Central,"House made selection of pates and cured meats served with Dijon mustard, red onions, cornichons, and croutons",11
+1,Lunch,Hors d'Oeuvres,70,Salade Verte,Mixed field greens tossed with tarragon vinaigrette,4.50
+1,Lunch,Hors d'Oeuvres,80,Salade d'Epinard,"Spinach tossed in warm bacon vinaigrette with parmesan, roasted red peppers, red onion, soft poached egg and bacon",6
+1,Lunch,Hors d'Oeuvres,90,Salade Cesar,"Crisp romaine tossed in our house Cesar dressing with Parmesan, croutons and an anchovy filet",5
+1,Lunch,Hors d'Oeuvres,100,Salade de Betterave,"Colorado beets, grilled asparagus, goat cheese, and walnuts served over mixed green tossed in balsamic vinaigrette",10
+1,Lunch,Les Grandes Salades,10,Salade de Saumon,"Grilled filet of salmon served over mixed green tossed in a tarragon vinaigrette with beets, hard boiled egg and bleu cheese",14
+1,Lunch,Les Grandes Salades,20,Salade de Chêvre,"Warm goat cheese crostini served with mixed greens tossed with strawberry vinaigrette with candied walnuts, grapes and strawberries",13
+1,Lunch,Les Grandes Salades,30,Salade Niçoise,"Ahi tuna grilled to your liking, served over mixed greens tossed in balsamic vinaigrette with boiled potatoes, egg plant, red onions, olives, tomatoes, anchovies, roasted red peppers, and hard boiled egg",14
+1,Lunch,Les Moules et Frites,10,Basilic,Fresh basil and diced tomatoes,11.95
+1,Lunch,Les Moules et Frites,20,Provençal,Parsley and pastis topped with breadcrumbs,11.95
+1,Lunch,Les Moules et Frites,30,Pistou,"Basil pesto, shallots, parmesan cheese",11.95
+1,Lunch,Les Moules et Frites,40,Mouclade,"Light yellow curry, white wine, shallots and a touch of cream",11.95
+1,Lunch,Les Moules et Frites,50,Normande,"Mushrooms, onions, brandy and cream",11.95
+1,Lunch,Les Moules et Frites,60,À la Moutarde,"Whole grain mustard, smoked bacon and cream",11.95
+1,Lunch,Les Moules et Frites,70,Marinière,"Parsley, shallots and garlic",11.95
+1,Lunch,Les Moules et Frites,80,Midi,"Olives, tomatoes, breadcrumbs and parmesan cheese",11.95
+1,Lunch,Les Moules et Frites,90,Safran,"Saffron, cream, onion and tomatoes",12.95
+1,Lunch,Les Moules et Frites,100,Fromage,Blue cheese and cream,11.95
+1,Lunch,Les Moules et Frites,110,Italienne (spicy),"Crushed red pepper, lemon and marinara",11.95
+1,Lunch,Les Moules et Frites,120,Portugaise,"Spanish chorizo, tomato, and a pinch of coriander",11.95
+1,Lunch,Les Plats Principaux,10,Quiche Lorraine,"Savory egg custard baked into a flaky pastry crust with ham, caramelized onions and Swiss cheese; served with a petite salade verte and pommes frites",9
+1,Lunch,Les Plats Principaux,20,Cassoulet du Central,"White beans simmered with pork, duck confit, tomatoes, onions and garlic; topped with a house made mushroom, pistachio sausage",14
+1,Lunch,Les Plats Principaux,30,Omelette au Saumon Fumé,"Three egg omelette with smoked salmon, onion, spinach, artichokes, and cream cheese; sided by house cut pommes frites and salade verte",11
+1,Lunch,Les Plats Principaux,40,Omelette aux Epinard,"Egg white omelette with spinach, mushrooms, roasted garlic and Swiss cheese; sides by house cut pommes frites and salade verte",9
+1,Lunch,Les Plats Principaux,50,Sole sauce Provençale,"Seared filet of sole topped with a rustic ragout of tomatoes, olives, capers, garlic, and lemon juice; served with rice and vegetables",13
+1,Lunch,Les Plats Principaux,60,Crêpes de Poulet,"Savory crêpes with chicken morsels in a Madras curry sauce with onions, carrots, and spinach; gratinéed with Swiss cheese",10
+1,Lunch,Les Sandwiches,10,Croque Madame,"Open faced sandwich with country bread, ham, and Swiss cheese topped with two sunny side up eggs ",10
+1,Lunch,Les Sandwiches,20,Panini aux Legumes,"Roasted eggplant, sautéed mushrooms, roasted red peppers, spinach, feta cheese, with parsnip puree layered on a house made French baguette",9
+1,Lunch,Les Sandwiches,30,"Jambon, Beurre et Cornichons","House cured ham layered on a French baguette with tomato, mixed green, Dijon aioli, and cornichons",11
+1,Lunch,Les Sandwiches,40,Monte Cristo,"Brioche layered with ham and Swiss cheese, dipped in egg then griddle fried served with powdered sugar raspberry coulis",9
+1,Lunch,Les Sandwiches,50,Monte Cristo et de la Soupe,Half Monte Cristo accompanied with a choice of our soup of the day selections and salade verte,7
+1,Lunch,Les Sandwiches,60,Petite Pâte Chaud et sa Soupe,Warm puff pastry stuffed with ground pork accompanied with a choice of our soup of the day,9
+1,Lunch,Les Sandwiches,70,Sandwich de Boeuf,"Roast beef layered on a brioche bun with tomato, red onions, mixed greens, Swiss cheese and horseradish aioli",11

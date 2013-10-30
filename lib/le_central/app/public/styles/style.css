@@ -726,3 +726,48 @@ object {
 	margin:0 auto;
 	text-indent:-99999px;
 }
+
+/* Menu Paage ---------------------------------------------- */
+#menu_main{
+	background-color: #dadada;
+	/*border: 1px solid black;*/
+	padding: 5px 10px; 
+}
+
+#menu_name{
+	float: left;
+	width: 225px;
+
+}
+
+#menu_description{
+	float: left;
+	width: 600px;
+	text-align: left;
+
+}
+
+#menu_price{
+	float: left;
+	width: 75px;
+	text-align: right;
+
+}
+
+#bottom_logo{
+	width: 100%;
+}
+
+#row_container{
+	margin-bottom: 10px;
+	text-align: bottom;
+	overflow: hidden;
+}
+
+#menu_description p, #menu_price p{
+	margin-bottom: 0;
+}
+
+
+
+
