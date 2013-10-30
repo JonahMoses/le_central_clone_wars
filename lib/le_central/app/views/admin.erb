@@ -23,8 +23,69 @@
 </header>
 </div>
 <!-- END HEADER -->
-<% all_items.each do |item| %>
+<br />
+<div style="width: 100%">
+  <table style="margin: 0 auto; width: 98%" border="1">
 
-  <p><%= item %></p>
+      <tr>
+        <th>Active</th>
+        <th>Meal</th>
+        <th>Course</th>
+        <th>Meal Order</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Created At</th>
+        <th>Updated At</th>
+      </tr>
 
-<% end %>
+    <% all_items.each do |item| %>
+
+      <form action="/">
+        <tr>
+          <td>
+            <% item[:active] %>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="active">
+          </td>
+          <td>
+            <select>
+              <option value="Brunch">Brunch</option>
+              <option value="Lunch">Lunch</option>
+              <option value="Dinner">Dinner<% item[:meal] %></option>
+            </select>
+          </td>
+          <td>
+            <select>
+              <option <% if item[:course] == "Hors d'Oeuvres" %> selected <% end %> value="Hors d'Oeuvres">Hors d'Oeuvres</option>
+              <option <% if item[:course] == "Les Soupes et Les Salades" %> selected <% end %> value="Les Soupes et Les Salades">Les Soupes et Les Salades</option>
+              <option <% if item[:course] == "Les Viendes" %> selected <% end %> value="Les Viendes">Les Viendes</option>
+              <option <% if item[:course] == "Les Poissons" %> selected <% end %> value="Les Poissons">Les Poissons</option>
+              <option <% if item[:course] == "Starters" %> selected <% end %> value="Starters">Starters</option>
+              <option <% if item[:course] == "Salads" %> selected <% end %> value="Salads">Salads</option>
+              <option <% if item[:course] == "Les Oeufs" %> selected <% end %> value="Les Oeufs">Les Oeufs</option>
+              <option <% if item[:course] == "Les Omelettes" %> selected <% end %> value="Les Omelettes">Les Omelettes</option>
+              <option <% if item[:course] == "Les Crêpes" %> selected <% end %> value="Les Crêpes">Les Crêpes</option>
+              <option <% if item[:course] == "From The Griddle" %> selected <% end %> value="From The Griddle">From The Griddle</option>
+              <option <% if item[:course] == "Les Moules et Frites" %> selected <% end %> value="Les Moules et Frites">Les Moules et Frites</option>
+              <option <% if item[:course] == "Pour Commencer" %> selected <% end %> value="Pour Commencer">Pour Commencer</option>
+              <option <% if item[:course] == "Les Desserts au Chocolat" %> selected <% end %> value="Les Desserts au Chocolat">Les Desserts au Chocolat</option>
+              <option <% if item[:course] == "Les Desserts Classiques" %> selected <% end %> value="Les Desserts Classiques">Les Desserts Classiques</option>
+              <option <% if item[:course] == "Les Desserts Glacés" %> selected <% end %> value="Les Desserts Glacés">Les Desserts Glacés</option>
+              <option <% if item[:course] == "Les Sandwiches" %> selected <% end %> value="Les Sandwiches">Les Sandwiches</option>
+              <option <% if item[:course] == "Les Plats Principaux" %> selected <% end %> value="Les Grandes Salades">Les Grandes Salades</option>
+              <option <% if item[:course] == "Les Plats Principaux" %> selected <% end %> value="Les Plats Principaux">Les Plats Principaux</option>
+            </select>
+          </td>
+          <td><%= item[:meal_order] %></td>
+          <td><input type="text" name="name" value="<%= item[:name] %>"></td>
+          <td><input type="text" name="name" value="<%= item[:description] %>"></td>
+          <td><input type="text" name="name" value="<%= item[:price] %>"></td>
+          <td><%= item[:created_at].strftime("%-m/%e/%y") %></td>
+          <td><%= item[:updated_at].strftime("%-m/%e/%y") %></td>
+        </tr>
+    <% end %>
+
+  </table>
+  <br />
+        <input style="width: 15%; float: right; margin-right: 2%" type="submit" name="submit" class="button" id="submit_btn" value="Save Changes"/>
+      </form>
+</div>
