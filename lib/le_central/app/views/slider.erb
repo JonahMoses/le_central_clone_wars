@@ -9,6 +9,9 @@
             <div class="slider-text">
               <h1>French cuisine in an eclectic setting</h1>
               <p class="slider-desc">We bring you the best of french cusine at an affordable price in quirky setting</p>
+              <% if flash[:notice] %>
+                <p style="font-size: 2em; font-weight: bold; color: red;"><%= flash[:notice] %></p>
+              <% end %>
             </div>
           </div>
         </li>

@@ -6,9 +6,9 @@ module LeCentral
     attr_reader :res_name, :res_phone, :res_time, :res_guests
 
     def initialize(reservation)
-      @res_name = reservation[:name]
-      @res_phone = reservation[:phone]
-      @res_time = reservation[:time]
+      @res_name   = reservation[:name]
+      @res_phone  = reservation[:phone]
+      @res_time   = reservation[:time]
       @res_guests = reservation[:guests]
     end
 
