@@ -278,7 +278,7 @@ sub {
 /* IE 8 hack */
 @media \0screen {
 .sf-menu > li.space {
-	padding-left:330px;
+	padding-left: 275px;
 }
 }
 
