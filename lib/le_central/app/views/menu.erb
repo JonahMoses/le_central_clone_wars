@@ -26,14 +26,19 @@
       <!-- <section id="maincontent" class="eight columns positionleft"> -->
       <div class="padcontent">
         <section class="content">
-          <% meal.each do |course, items|  %>
-            <div>
-              <h2><%= course %></h2>
-              <% items.each do |item| %>
-                  <p><h4><%= item[:name] %></h4> <%= item[:description] %> <%= item[:price] %></p>
-              <% end %>
-            </div>
-          <% end %>
+          <div id= "menu_main">
+            <% meal.each do |course, items|  %>
+                <center><font face="araepy" color="green"><h1><%= course %></h1></font></center>
+                <% items.each do |item| %>
+                    <div id="row_container">
+                      <div id="menu_name"><h4><%= item[:name] %></h4></div> 
+                      <div id="menu_description"><p><%= item[:description] %></p></div> 
+                      <div id="menu_price"><p><%= item[:price] %></p></div>
+                    </div><!--end row container -->
+                <% end %><!-- end loop -->
+            <% end %>
+            <center><img src="../images/top.png"></center>
+          </div> <!--end main menu container -->
         </section>
       </div>
       <!-- </section> -->
