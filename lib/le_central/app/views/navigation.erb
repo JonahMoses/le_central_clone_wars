@@ -7,9 +7,9 @@
             <li class="current"><a href="/"><img src="/images/home.gif"></a></li>
             <li><a>Our Menu</a>
               <ul>
-                <li><a href="/menu/Brunch">Brunch</a></li>
-                <li><a href="/menu/Lunch">Lunch</a></li>
-                <li><a href="/menu/Dinner">Dinner</a></li>
+                <% menu.meals.each do |meal| %>
+                  <li><a href="/menu/<%= meal %>"><%= meal %></a></li>
+                <% end %>
               </ul>
             </li>
             <li><a href="/reservation">Reservation</a></li>
