@@ -19,7 +19,7 @@ class ControllerTest < Minitest::Test
 
   def test_le_central
     get '/'
-    assert (last_response.body =~ /Sweet Menu/)
+    assert (last_response.body =~ /Menu/)
   end
 
 

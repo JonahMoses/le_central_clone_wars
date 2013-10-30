@@ -6,7 +6,11 @@
         <div class="twelve columns">
           <div class="pagetitle">
             <h1>Login</h1>
-            <div class="pagedesc">Correct Authentication required for the admin page</div>
+            <div class="pagedesc">Correct Authentication required for the admin page
+            <% if flash[:notice] %>
+              <p style="font-size: 2em; font-weight: bold; color: red;"><%= flash[:notice] %></p>
+            <% end %>
+            </div>
           </div>
         </div>
       </div>

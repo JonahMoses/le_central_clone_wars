@@ -6,8 +6,8 @@ module LeCentral
     attr_reader :name, :email, :subject, :message
 
     def initialize(form)
-      @name = form[:name]
-      @email = form[:email]
+      @name    = form[:name]
+      @email   = form[:email]
       @subject = form[:subject]
       @message = form[:message]
     end
