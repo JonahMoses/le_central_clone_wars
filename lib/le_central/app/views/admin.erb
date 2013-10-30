@@ -91,6 +91,22 @@
         </fieldset>
       </form>
       <form action="/" method="POST">
-        <input style="width: 15%; float: left; margin-left: 15px" type="submit" name="add_item" class="button" id="submit_btn" value="Add New Item"/>
+        <input style="width: 15%; float: left; margin-left: 15px" type="submit" name="add_item" class="button" id="submit_btn" data-toggle="modal" data-target="#myModal" value="Add New Item"/>
       </form>
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" style="text-align: center">Enter New Menu Item</h4>
+      </div>
+      <div class="modal-body">
+        New Menu Item Form Here
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

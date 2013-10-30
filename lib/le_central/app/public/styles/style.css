@@ -727,11 +727,11 @@ object {
 	text-indent:-99999px;
 }
 
-/* Menu Paage ---------------------------------------------- */
+/* Menu Page ---------------------------------------------- */
 #menu_main{
 	background-color: #dadada;
 	/*border: 1px solid black;*/
-	padding: 5px 10px; 
+	padding: 5px 10px;
 }
 
 #menu_name{
@@ -749,7 +749,7 @@ object {
 
 #menu_price{
 	float: left;
-	width: 75px;
+	width: 25px;
 	text-align: right;
 
 }
