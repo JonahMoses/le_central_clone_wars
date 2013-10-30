@@ -1,3 +1,10 @@
+<script>
+function popup()
+{
+  alert("Thank you for your reservation we will be in touch shortly.");
+}
+</script>
+
 <div id="bg-image">
   <!-- TITLE -->
   <div id="outertitle">
@@ -51,7 +58,7 @@
                   <input type="text" name="reservation[time]" id="subject" size="100"  value="" class="text-input" />
                   <label for="subject" id="subject_label">Number of Guests:</label>
                   <input type="text" name="reservation[guests]" id="subject" size="100"  value="" class="text-input" />
-                  <input style="width: 55%" type="submit" name="submit" class="button" id="submit_btn" value="Send Message"/>
+                  <input style="width: 55%" type="submit" name="submit" onclick="popup()" class="button" id="submit_btn" value="Send Message"/>
                 </fieldset>
               </form>
             </div><!-- end contactform -->

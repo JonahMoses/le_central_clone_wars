@@ -272,13 +272,13 @@ sub {
 }
 .sf-menu > li:first-child{ padding-left:0px; margin-left:0px;}
 .sf-menu > li.space{
-	padding-left:350px
+	padding-left:285px
 }
 
 /* IE 8 hack */
 @media \0screen {
 .sf-menu > li.space {
-	padding-left: 275px;
+	padding-left: 285px;
 }
 }
 
