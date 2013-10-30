@@ -94,8 +94,7 @@ module LeCentral
     end
 
     put '/update_database' do
-      binding.pry
-      LeCentral::Menu.update(params[:menu_item])
+      LeCentral::Menu.update(params)
       redirect '/admin'
     end
 

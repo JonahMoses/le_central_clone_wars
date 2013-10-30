@@ -45,8 +45,7 @@ module LeCentral
       def find
       end
 
-      def update(data)
-        
+      def update(params)
 
       end
 

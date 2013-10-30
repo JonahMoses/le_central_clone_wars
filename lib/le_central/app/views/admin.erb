@@ -39,43 +39,41 @@
         <th>Updated At</th>
       </tr>
 
-    <% all_items.each do |item| %>
-
-      <form action="/update_database" method="POST">
-        <input type="hidden" name="_method" value="PUT"/>
-        <fieldset>
-        <tr>
-          <td>
-            <% item[:active] %>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name= "menu_item[active]"/>
-          </td>
-          <td>
-            <select>
-              <% menu.meals.each do |meal| %>
-                <option <% if item[:meal] == meal %> selected <% end %> name="menu_item[course]" value="meal"><%= meal %></option>
-              <% end %>
-            </select>
-          </td>
-          <td>
-            <select>
-              <% menu.courses.each do |course| %>
-                <option <% if item[:course] == course %> selected <% end %> name="menu_item[course]" value="course"><%= course %></option>
-              <% end %>
-            </select>
-          </td>
-          <td><input type="text" name="menu_item[meal_order]" value="<%= item[:meal_order] %>"></td>
-          <td><input type="text" name="menu_item[name]" value="<%= item[:name] %>"></td>
-          <td><input type="text" name="menu_item[description]" value="<%= item[:description] %>"></td>
-          <td><input type="text" name="menu_item[price]" value="<%= item[:price] %>"></td>
-          <td><%= item[:created_at].strftime("%-m/%e/%y") %></td>
-          <td><%= item[:updated_at].strftime("%-m/%e/%y") %></td>
-        </tr>
-    <% end %>
+  <form action="/update_database" method="POST">
+    <input type="hidden" name="_method" value="PUT"/>
+        <% all_items.each do |item| %>
+          <tr>
+            <td>
+              <% item[:active] %>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name= "<%= item[:id] %>.menu_item[active]"/>
+            </td>
+            <td>
+              <select>
+                <% menu.meals.each do |meal| %>
+                  <option <% if item[:meal] == meal %> selected <% end %> name="<%= item[:id] %>.menu_item[course]" value="meal"><%= meal %></option>
+                <% end %>
+              </select>
+            </td>
+            <td>
+              <select>
+                <% menu.courses.each do |course| %>
+                  <option <% if item[:course] == course %> selected <% end %> name="<%= item[:id] %>.menu_item[course]" value="course"><%= course %></option>
+                <% end %>
+              </select>
+            </td>
+            <td><input type="text" name="<%= item[:id] %>.menu_item[meal_order]" value="<%= item[:meal_order] %>"></td>
+            <td><input type="text" name="<%= item[:id] %>.menu_item[name]" value="<%= item[:name] %>"></td>
+            <td><input type="text" name="<%= item[:id] %>.menu_item[description]" value="<%= item[:description] %>"></td>
+            <td><input type="text" name="<%= item[:id] %>.menu_item[price]" value="<%= item[:price] %>"></td>
+            <td><%= item[:created_at].strftime("%-m/%e/%y") %></td>
+            <td><%= item[:updated_at].strftime("%-m/%e/%y") %></td>
+          </tr>
+        <% end %>
 
   </table>
+    <input style="width: 15%; float: right; margin-right: 15px" type="submit" name="submit" class="button" id="submit_btn" value="Save Changes"/>
+  </form>
   <br />
-        <input style="width: 15%; float: right; margin-right: 15px" type="submit" name="submit" class="button" id="submit_btn" value="Save Changes"/>
-        </fieldset>
-      </form>
+
       <form action="/" method="POST">
         <input style="width: 15%; float: left; margin-left: 15px" type="submit" name="add_item" class="button" id="submit_btn" data-toggle="modal" data-target="#myModal" value="Add New Item"/>
       </form>
