@@ -25,7 +25,7 @@ module LeCentral
     end
 
     get '/login' do
-      erb :login
+      erb :login, locals: {menu: LeCentral::Menu}
     end
 
     post "/session" do
@@ -53,28 +53,29 @@ module LeCentral
     end
 
     get '/' do
-      erb :index
+      erb :index, locals: {menu: LeCentral::Menu}
     end
 
     get '/about' do
-      erb :about
+      erb :about, locals: {menu: LeCentral::Menu}
     end
 
     get '/contact' do
-      erb :contact
+      erb :contact, locals: {menu: LeCentral::Menu}
     end
 
     get '/gallery' do
-      erb :gallery
+      erb :gallery, locals: {menu: LeCentral::Menu}
     end
 
     get '/reservation' do
-      erb :reservation
+      erb :reservation, locals: {menu: LeCentral::Menu}
     end
 
     get '/menu/:meal' do |meal|
       meal_items = LeCentral::Menu.group_items_by_course_for(meal)
-      erb :menu, locals: {meal: meal_items}
+      erb :menu, locals: {meal: meal_items, menu: LeCentral::Menu
+      }
     end
 
     post '/contact' do
@@ -89,11 +90,7 @@ module LeCentral
 
     get '/admin' do
       check_authentication
-      erb :admin, locals: {all_items: LeCentral::Menu.all_items}
-    end
-
-    get '/modal' do
-      erb :modal
+      erb :admin, locals: {all_items: LeCentral::Menu.all_items, menu: LeCentral::Menu}
     end
 
   end
