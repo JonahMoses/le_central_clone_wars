@@ -4,7 +4,7 @@ gem 'sinatra', require: 'sinatra/base'
 gem 'sequel'
 gem 'sqlite3'
 gem 'pony'
-
+gem 'rack-flash3'
 
 group :development do
   gem 'pry', require: false

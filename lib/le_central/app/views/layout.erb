@@ -51,7 +51,9 @@
       <!-- navigation -->
       <%= erb :navigation %>
       <!-- END navigation -->
-
+      <% if flash[:notice] %>
+        <p><%= flash[:notice] %></p>
+      <% end %>
     </header>
   </div>
   <!-- END HEADER -->
