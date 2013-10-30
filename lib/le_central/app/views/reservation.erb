@@ -6,7 +6,7 @@
         <div class="twelve columns">
           <div class="pagetitle">
             <h1>Reservations</h1>
-            <div class="pagedesc">Reserve a table directly online!</div>
+            <div class="pagedesc">Please make a reservation to assure you get seated</div>
           </div>
         </div>
       </div>
@@ -16,35 +16,73 @@
   <div class="slider-pattern"></div>
   <img src="/images/bgheader/bg-header1.jpg" alt="" />
 </div>
+
 </header>
 </div>
 <!-- END HEADER -->
 
-<center><h1>Reservations</h1></center>
 
-      <section id="maincontent" class="eight columns positionleft">
+<!-- MAIN CONTENT -->
+<div id="outermain">
+  <div class="container">
+    <div class="row">
+      <section id="maincontent" class="eight columns positioncenter">
         <div class="padcontent">
           <section class="content">
+
+            <div class="contact">
+              <h3>For reservations please call us or fill out the form below</a></h3>
+              <img src="/images/phone.png" alt="" class="alignleft" /><span>(303) 863-8094</span>
+              <p>If you need to cancel, please notify us immediately.</p>
+            </div>
+            <div class="separator"></div>
             <div id="contactform">
               <form action="/reservation" method= "POST" role= "form">
                 <fieldset>
                  <!--  <span class="error" id="name_error">Please enter name !</span>
-                  <span class="error" id="email_error">Please enter phone address !</span>
-                  <span class="error" id="email_error2">Please enter valid phone address !</span>
+                  <span class="error" id="email_error">Please enter email address !</span>
+                  <span class="error" id="email_error2">Please enter valid email address !</span>
                   <span class="error" id="msg_error">Please enter message !</span> -->
                   <label for="name" id="name_label">Your Name:</label>
                   <input type="text" name="reservation[name]" id="name" size="100" value="" class="text-input" />
-                  <label for="phone" id="email_label">Your Phone Number:</label>
-                  <input type="text" name="reservation[phone]" id="phone" size="100" value="" class="text-input" />
-                  <label for="time" id="reservation_time">Reservation Time:</label>
-                  <input type="text" name="reservation[time]" id="time" size="100"  value="" class="text-input" />
-                  <label for="guests" id="number_of_guests">Number Of Guests:</label>
-                  <input type="text" name="reservation[guests]" id="guests" size="100"  value="" class="text-input" />
+                  <label for="phone" id="email_label">Your Phone:</label>
+                  <input type="text" name="reservation[phone]" id="email" size="100" value="" class="text-input" />
+                  <label for="" id="subject_label">Time:</label>
+                  <input type="text" name="reservation[time]" id="subject" size="100"  value="" class="text-input" />
+                  <label for="subject" id="subject_label">Number of Guests:</label>
+                  <input type="text" name="reservation[guests]" id="subject" size="100"  value="" class="text-input" />
                   <br />
-                  <input type="submit" name="submit" class="button" id="submit_btn" value="Send Message"/>
+                  
+                  <center><input type="submit" name="submit" class="button" id="submit_btn" value="Send Message"/><
                 </fieldset>
               </form>
-            </div>
+            </div><!-- end contactform -->
+
           </section>
+
         </div>
-      </section><!-- end contactform -->
+      </section>
+      <aside class="sidebar four columns">
+        <ul>
+          <li class="widget-container">
+            <h2 class="widget-title">Our Food</h2>
+            <div class="textwidget">
+              <p>Diners will get an experience as authentic as possible, as most of the painters were passionate about food and left detailed recipes and menus.  Desserts are prepared in house by Le Central's own pastry chefs. Le Central also offers authentically French delights such as macarons - various flavored ganache nested between to thin flavored cookies. This gluten free treat is exceptional.</p><br>
+            </div>
+          </li>
+          <li class="widget-container">
+            <h2 class="widget-title">Our Service</h2>
+            <div class="textwidget">
+              <p>Every month we offer a weekly prefixe chef menu. In October and continuing into November Le Central follows and completes the sensorial Denver Art Museum Passport to Paris exhibitions by featuring a weekly prix fixe, pairing food and painters. Diners will get an experience as authentic as possible, as most of the painters were passionate about food and left detailed recipes and menus.</p><br>
+            </div>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- END MAIN CONTENT -->
+
+
+
+
