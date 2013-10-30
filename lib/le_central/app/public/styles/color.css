@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6{color:#403e3b;}
 #logo .desc{color:#fff;}
 
 /* Menu */
-.sf-menu a{ color:#5e5644; }/* 1st level */
+.sf-menu a{ color:#aaaaaa; }/* 1st level */
 #topnav li a:hover,
 #topnav li.current > a {color:#fff;}/* 1st level */
 .sf-menu > li:first-child{ background:none;}
