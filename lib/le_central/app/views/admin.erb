@@ -49,9 +49,9 @@
           </td>
           <td>
             <select>
-              <option value="Brunch">Brunch</option>
-              <option value="Lunch">Lunch</option>
-              <option value="Dinner">Dinner<% item[:meal] %></option>
+              <option <% if item[:meal] == "Brunch" %> selected <% end %> value="Brunch">Brunch</option>
+              <option <% if item[:meal] == "Lunch" %> selected <% end %> value="Lunch">Lunch</option>
+              <option <% if item[:meal] == "Dinner" %> selected <% end %> value="Dinner">Dinner</option>
             </select>
           </td>
           <td>
