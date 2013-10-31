@@ -40,7 +40,7 @@
       </tr>
 
   <form action="/update_database" method="POST">
-    <input type="hidden" name="_method" value="PUT"/>
+
         <% all_items.each do |item| %>
           <tr>
             <td>
@@ -70,13 +70,13 @@
         <% end %>
 
   </table>
-    <input style="width: 15%; float: right; margin-right: 15px" type="submit" name="submit" class="button" id="submit_btn" value="Save Changes"/>
-  </form>
   <br />
-
-      <form action="/" method="POST">
-        <input style="width: 15%; float: left; margin-left: 15px" type="submit" name="add_item" class="button" id="submit_btn" data-toggle="modal" data-target="#myModal" value="Add New Item"/>
-      </form>
+    <input style="width: 15%; float: right; margin-right: 15px" type="submit" name="submit" class="button" id="submit_btn" value="Save Changes"/>
+  <input type="hidden" name="_method" value="PUT"/>
+  </form>
+  <form action="/" method="POST">
+    <input style="width: 15%; float: left; margin-left: 15px" type="submit" name="add_item" class="button" id="submit_btn" data-toggle="modal" data-target="#myModal" value="Add New Item"/>
+  </form>
 </div>
 
 
