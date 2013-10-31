@@ -9,9 +9,9 @@ module LeCentral
 
     def self.database
       if ENV['RACK_ENV'] == 'test'
-        @database ||= Sequel.postgres("postgres://jonahmoses@localhost/le_central_test")
+        @database ||= Sequel.connect("postgres://jonahmoses@localhost/le_central_test")
       else
-        @database ||= Sequel.postgres(ENV["DATABASE_URL"] || :host=>'localhost', :user=>ENV["DB_USER"], :database=>'le_central_development')
+        @database ||= Sequel.connect(ENV["DATABASE_URL"] || :host=>'localhost', :user=>ENV["DB_USER"], :database=>'le_central_development')
       end
     end
 
