@@ -17,17 +17,32 @@ module LeCentral
     end
 
     def self.create_menu_items_table
-      database.create_table? :menu_items do
-        primary_key :id
-        Integer     :active
-        Text        :meal
-        Text        :course
-        Integer     :meal_order
-        Text        :name
-        Text        :description
-        Text        :price
-        DateTime    :created_at
-        DateTime    :updated_at
+      if ENV["DATABASE_URL"]
+        database.create_table? :menu_items do
+          primary_key :id
+          Integer     :active
+          Text        :meal
+          Text        :course
+          Integer     :meal_order
+          Text        :name
+          Text        :description
+          Text        :price
+          DateTime    :created_at
+          DateTime    :updated_at
+        end
+      else
+        database.create_table? :menu_items do
+          primary_key :id
+          Integer     :active
+          String      :meal
+          String      :course
+          Integer     :meal_order
+          String      :name
+          String      :description
+          String      :price
+          DateTime    :created_at
+          DateTime    :updated_at
+        end
       end
     end
 
@@ -44,13 +59,13 @@ module LeCentral
       menu_items_table.delete
       menu_data.each do |row|
         LeCentral::Menu.create({
-          :active         => row[:active],
-          :meal           => row[:meal],
-          :course         => row[:course],
-          :meal_order     => row[:meal_order],
-          :name           => row[:name],
-          :description    => row[:description],
-          :price          => row[:price]
+          "active"         => row[:active],
+          "meal"           => row[:meal],
+          "course"         => row[:course],
+          "meal_order"     => row[:meal_order],
+          "name"           => row[:name],
+          "description"    => row[:description],
+          "price"          => row[:price]
           })
       end
     end

@@ -89,7 +89,10 @@
                 <%= item[:updated_at].strftime("%-m/%e/%y") %>
               </td>
               <td>
-                <button type="button">Delete</button>
+              <form method="POST" action="/<%= item[:id] %>">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit">Delete</button>
+              </form>
               </td>
             </tr>
           <% end %>
@@ -114,7 +117,7 @@
         <h4 class="modal-title" style="text-align: center">Enter New Menu Item</h4>
       </div>
       <div class="modal-body">
-        <form action='/add_item' method='POST'>
+        <form action='/' method='POST'>
           Meal:
           <input style="width: 540px" type='text' name='meal[meal]' value="" />
           Course:
@@ -129,7 +132,6 @@
           <input style="width: 540px" type='text' name='meal[price]' value="" />
 
           <input style="width: 25%; float: left; margin-left: 15px" type="submit" class="button" id="submit_btn" value="Add New Item"/>
-          <input type="hidden" name="_method" value="PUT"/>
         </form>
       </div>
     </div><!-- /.modal-content -->

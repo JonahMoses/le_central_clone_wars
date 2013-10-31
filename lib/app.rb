@@ -103,8 +103,8 @@ module LeCentral
       redirect '/admin'
     end
 
-    put '/add_item' do
-      LeCentral::Menu.create(params)
+    delete '/:id' do |id|
+      LeCentral::Menu.delete(id.to_i)
       redirect '/admin'
     end
 

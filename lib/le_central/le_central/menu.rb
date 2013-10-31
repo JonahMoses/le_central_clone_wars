@@ -70,6 +70,11 @@ module LeCentral
         @all_items = nil
       end
 
+      def delete(id)
+        Records.database[:menu_items].where(:id => id).delete
+        reset
+      end
+
     end
   end
 end
