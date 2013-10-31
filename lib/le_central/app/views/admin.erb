@@ -40,30 +40,31 @@
       </tr>
 
   <form action="/update_database" method="POST">
-    <input type="hidden" name="_method" value="PUT"/>
         <% all_items.each do |item| %>
           <tr>
             <td>
-              <% item[:active] %>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name= "<%= item[:id] %>.menu_item[active]"/>
+              <% item[:active] %>&nbsp;&nbsp;&nbsp;&nbsp;
+              <input <% if item[:active] == 0 %> checked <% end %> id="active" type="hidden" name= "<%= item[:id] %>[active]" value="0"/>
+              <input <% if item[:active] == 1 %> checked <% end %> type="checkbox" id="active" name= "<%= item[:id] %>[active]" value="1"/>
             </td>
             <td>
               <select>
                 <% menu.meals.each do |meal| %>
-                  <option <% if item[:meal] == meal %> selected <% end %> name="<%= item[:id] %>.menu_item[course]" value="meal"><%= meal %></option>
+                  <option <% if item[:meal] == meal %> selected <% end %> name="<%= item[:id] %>[course]" value="meal"><%= meal %></option>
                 <% end %>
               </select>
             </td>
             <td>
               <select>
                 <% menu.courses.each do |course| %>
-                  <option <% if item[:course] == course %> selected <% end %> name="<%= item[:id] %>.menu_item[course]" value="course"><%= course %></option>
+                  <option <% if item[:course] == course %> selected <% end %> name="<%= item[:id] %>[course]" value="course"><%= course %></option>
                 <% end %>
               </select>
             </td>
-            <td><input type="text" name="<%= item[:id] %>.menu_item[meal_order]" value="<%= item[:meal_order] %>"></td>
-            <td><input type="text" name="<%= item[:id] %>.menu_item[name]" value="<%= item[:name] %>"></td>
-            <td><input type="text" name="<%= item[:id] %>.menu_item[description]" value="<%= item[:description] %>"></td>
-            <td><input type="text" name="<%= item[:id] %>.menu_item[price]" value="<%= item[:price] %>"></td>
+            <td><input type="text" name="<%= item[:id] %>[meal_order]" value="<%= item[:meal_order] %>"></td>
+            <td><input type="text" name="<%= item[:id] %>[name]" value="<%= item[:name] %>"></td>
+            <td><input type="text" name="<%= item[:id] %>[description]" value="<%= item[:description] %>"></td>
+            <td><input type="text" name="<%= item[:id] %>[price]" value="<%= item[:price] %>"></td>
             <td><%= item[:created_at].strftime("%-m/%e/%y") %></td>
             <td><%= item[:updated_at].strftime("%-m/%e/%y") %></td>
           </tr>
@@ -71,6 +72,10 @@
 
   </table>
     <input style="width: 15%; float: right; margin-right: 15px" type="submit" name="submit" class="button" id="submit_btn" value="Save Changes"/>
+    <input type="hidden" name="_method" value="PUT"/>
+    <!-- if(document.getElementById("active").checked){
+      document.getElementById("activeDisabled").disabled = true;
+    } -->
   </form>
   <br />
 
