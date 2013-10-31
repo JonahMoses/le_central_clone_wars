@@ -39,7 +39,7 @@
         <th>Updated At</th>
       </tr>
 
-  <form action="/update_database" method="POST">
+  <form action="/update_database" id="menu_list" method="POST">
         <% all_items.each do |item| %>
           <tr>
             <td>
@@ -48,16 +48,16 @@
               <input <% if item[:active] == 1 %> checked <% end %> type="checkbox" id="active" name= "<%= item[:id] %>[active]" value="1"/>
             </td>
             <td>
-              <select>
+              <select name="<%= item[:id] %>[meal]">
                 <% menu.meals.each do |meal| %>
-                  <option <% if item[:meal] == meal %> selected <% end %> name="<%= item[:id] %>[course]" value="meal"><%= meal %></option>
+                  <option <% if item[:meal] == meal %> selected <% end %> value="<%= meal %>"><%= meal %></option>
                 <% end %>
               </select>
             </td>
             <td>
-              <select>
+              <select name="<%= item[:id] %>[course]">
                 <% menu.courses.each do |course| %>
-                  <option <% if item[:course] == course %> selected <% end %> name="<%= item[:id] %>[course]" value="course"><%= course %></option>
+                  <option <% if item[:course] == course %> selected <% end %> value="<%= course %>"><%= course %></option>
                 <% end %>
               </select>
             </td>
