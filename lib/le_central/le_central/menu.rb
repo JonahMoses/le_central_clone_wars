@@ -3,9 +3,7 @@ require './lib/le_central/le_central/records'
 require 'pry'
 
 module LeCentral
-
   class Menu
-
     class << self
 
       def group_items_by_course_for(meal)
@@ -22,7 +20,7 @@ module LeCentral
       end
 
       def all_items
-        Records.menu_items_table.all
+        @all_items ||= Records.menu_items_table.all
       end
 
       def meals
@@ -42,11 +40,24 @@ module LeCentral
         end
       end
 
-      def find
+      def update(params)
+        params.each do |key, mi|
+          Records.database[:menu_items].where(:id => key.to_i).update(
+            :active       => mi["active"].to_i,
+            :meal         => mi["meal"],
+            :course       => mi["course"],
+            :meal_order   => mi["meal_order"].to_i,
+            :name         => mi["name"],
+            :description  => mi["description"],
+            :price        => mi["price"],
+            :updated_at   => DateTime.now
+            )
+          reset
+        end
       end
 
-      def update(params)
-
+      def reset
+        @all_items = nil
       end
 
     end
