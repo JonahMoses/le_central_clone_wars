@@ -10,9 +10,9 @@ module LeCentral
 
     def self.database
       if ENV['RACK_ENV'] == 'test'
-        @database ||= Sequel.sqlite('lib/le_central/db/test_database.sqlite3')
+        @database ||= Sequel.postgres("postgres://jonahmoses@localhost/le_central_test")
       else
-        @database ||= Sequel.sqlite('lib/le_central/db/database.sqlite3')
+        @database ||= Sequel.postgres(ENV["DATABASE_URL"] || :host=>'localhost', :user=>ENV["DB_USER"], :database=>'le_central_development')
       end
     end
 
@@ -20,12 +20,12 @@ module LeCentral
       database.create_table? :menu_items do
         primary_key :id
         Integer     :active
-        String      :meal,        :size => 10
-        String      :course,      :size => 30
+        Text      :meal
+        Text      :course
         Integer     :meal_order
-        String      :name,        :size => 50
-        String      :description, :size => 200
-        String      :price,       :size => 20
+        Text      :name
+        Text      :description
+        Text      :price
         DateTime    :created_at
         DateTime    :updated_at
       end

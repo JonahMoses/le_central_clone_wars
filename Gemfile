@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 
 gem 'sinatra', require: 'sinatra/base'
 gem 'sequel'
-gem 'sqlite3'
 gem 'pony'
 gem 'rack-flash3'
+gem 'pg'
 
 group :development do
   gem 'pry', require: false
