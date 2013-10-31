@@ -1,6 +1,5 @@
 require './lib/le_central/le_central/menu_item'
 require './lib/le_central/le_central/records'
-require 'pry'
 
 module LeCentral
   class Menu
