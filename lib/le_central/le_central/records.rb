@@ -1,7 +1,6 @@
 require 'bundler'
 Bundler.require
 require 'csv'
-require 'pry'
 require './lib/le_central/le_central/menu.rb'
 
 module LeCentral
