@@ -98,6 +98,16 @@ module LeCentral
       redirect '/admin'
     end
 
+    post '/' do
+      LeCentral::Menu.flatten(params)
+      redirect '/admin'
+    end
+
+    put '/add_item' do
+      LeCentral::Menu.create(params)
+      redirect '/admin'
+    end
+
   end
 end
 

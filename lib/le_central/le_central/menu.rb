@@ -30,13 +30,24 @@ module LeCentral
         all_items.map { |i| i[:course] }.uniq.sort
       end
 
+      def flatten(params)
+        create(params["meal"])
+      end
+
       def create(menu_item)
-        return if menu_item[:name].nil?
-        menu_item[:created_at] = DateTime.now
-        menu_item[:updated_at] = DateTime.now
-        Records.database.transaction  do
-          Records.database[:menu_items] << menu_item
-        end
+        return if menu_item.empty?
+        Records.database[:menu_items].insert(
+            :active       => 1,
+            :meal         => menu_item["meal"],
+            :course       => menu_item["course"],
+            :meal_order   => menu_item["meal_order"].to_i,
+            :name         => menu_item["name"],
+            :description  => menu_item["description"],
+            :price        => menu_item["price"],
+            :created_at   => DateTime.now,
+            :updated_at   => DateTime.now
+          )
+        reset
       end
 
       def update(params)

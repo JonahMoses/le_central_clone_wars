@@ -24,56 +24,80 @@
 </div>
 <!-- END HEADER -->
 <br />
-<div style="width: 100%">
-  <table style="margin: 0 auto; width: 98%" border="1">
+<form action="/" method="POST">
+  <input style="width: 15%; float: left; margin-left: 15px" type="submit" name="add_item" class="button" id="submit_btn" data-toggle="modal" data-target="#myModal" value="Add New Item"/>
+</form>
+<form action="/logout" method="GET">
+  <input style="width: 15%; float: right; margin-right: 15px; color: red;" type="submit" name="logout" class="button" id="submit_btn" value="Log Out"/>
+</form>
+<form action="/update_database" id="menu_list" method="POST">
+  <input style="width: 15%; float: right; margin-right: 15px" type="submit" name="submit" class="button" id="submit_btn" value="Save Changes"/>
+  <br /><br />
+  <div style="float: center">
+    <table style="margin: 0 auto; width: 98%; table-layout: auto;" border="1">
 
-      <tr>
-        <th>Active</th>
-        <th>Meal</th>
-        <th>Course</th>
-        <th>Meal Order</th>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Price</th>
-        <th>Created At</th>
-        <th>Updated At</th>
-      </tr>
+        <tr>
+          <th>Active</th>
+          <th>Meal</th>
+          <th>Course</th>
+          <th>Order</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Created</th>
+          <th>Updated</th>
+          <th>Delete</th>
+        </tr>
 
-  <form action="/update_database" id="menu_list" method="POST">
-        <% all_items.each do |item| %>
-          <tr>
-            <td>
-              <% item[:active] %>&nbsp;&nbsp;&nbsp;&nbsp;
-              <input <% if item[:active] == 0 %> checked <% end %> id="active" type="hidden" name= "<%= item[:id] %>[active]" value="0"/>
-              <input <% if item[:active] == 1 %> checked <% end %> type="checkbox" id="active" name= "<%= item[:id] %>[active]" value="1"/>
-            </td>
-            <td>
-              <select name="<%= item[:id] %>[meal]">
-                <% menu.meals.each do |meal| %>
-                  <option <% if item[:meal] == meal %> selected <% end %> value="<%= meal %>"><%= meal %></option>
-                <% end %>
-              </select>
-            </td>
-            <td>
-              <select name="<%= item[:id] %>[course]">
-                <% menu.courses.each do |course| %>
-                  <option <% if item[:course] == course %> selected <% end %> value="<%= course %>"><%= course %></option>
-                <% end %>
-              </select>
-            </td>
-            <td><input type="text" name="<%= item[:id] %>[meal_order]" value="<%= item[:meal_order] %>"></td>
-            <td><input type="text" name="<%= item[:id] %>[name]" value="<%= item[:name] %>"></td>
-            <td><input type="text" name="<%= item[:id] %>[description]" value="<%= item[:description] %>"></td>
-            <td><input type="text" name="<%= item[:id] %>[price]" value="<%= item[:price] %>"></td>
-            <td><%= item[:created_at].strftime("%-m/%e/%y") %></td>
-            <td><%= item[:updated_at].strftime("%-m/%e/%y") %></td>
-          </tr>
-        <% end %>
+          <% all_items.each do |item| %>
+            <tr>
+              <td>
+                <% item[:active] %>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input <% if item[:active] == 0 %> checked <% end %> id="active" type="hidden" name= "<%= item[:id] %>[active]" value="0"/>
+                <input <% if item[:active] == 1 %> checked <% end %> type="checkbox" id="active" name= "<%= item[:id] %>[active]" value="1"/>
+              </td>
+              <td>
+                <select name="<%= item[:id] %>[meal]">
+                  <% menu.meals.each do |meal| %>
+                    <option <% if item[:meal] == meal %> selected <% end %> value="<%= meal %>"><%= meal %></option>
+                  <% end %>
+                </select>
+              </td>
+              <td>
+                <select name="<%= item[:id] %>[course]">
+                  <% menu.courses.each do |course| %>
+                    <option <% if item[:course] == course %> selected <% end %> value="<%= course %>"><%= course %></option>
+                  <% end %>
+                </select>
+              </td>
+              <td>
+                <input type="text" style="width: 40px" name="<%= item[:id] %>[meal_order]" value="<%= item[:meal_order] %>">
+              </td>
+              <td>
+                <input type="text" name="<%= item[:id] %>[name]" value="<%= item[:name] %>">
+              </td>
+              <td>
+                <input type="text" name="<%= item[:id] %>[description]" value="<%= item[:description] %>">
+              </td>
+              <td>
+                <input type="text" style="width: 40px" name="<%= item[:id] %>[price]" value="<%= item[:price] %>">
+              </td>
+              <td>
+                <%= item[:created_at].strftime("%-m/%e/%y") %>
+              </td>
+              <td>
+                <%= item[:updated_at].strftime("%-m/%e/%y") %>
+              </td>
+              <td>
+                <button type="button">Delete</button>
+              </td>
+            </tr>
+          <% end %>
 
-  </table>
-  <br />
+    </table>
+    <br />
     <input style="width: 15%; float: right; margin-right: 15px" type="submit" name="submit" class="button" id="submit_btn" value="Save Changes"/>
-  <input type="hidden" name="_method" value="PUT"/>
+    <input type="hidden" name="_method" value="PUT"/>
   </form>
   <form action="/" method="POST">
     <input style="width: 15%; float: left; margin-left: 15px" type="submit" name="add_item" class="button" id="submit_btn" data-toggle="modal" data-target="#myModal" value="Add New Item"/>
@@ -90,14 +114,22 @@
         <h4 class="modal-title" style="text-align: center">Enter New Menu Item</h4>
       </div>
       <div class="modal-body">
-        <form action='/' method='POST'>
-          Meal: <input style="width: 540px" type='text' name='meal[meal]' value="" />
-          Course: <input style="width: 540px" type='text' name='meal[course]' value="" />
-          Meal Order: <input style="width: 540px" type='text' name='meal[meal_order]' value="" />
-          Name: <input style="width: 540px" type='text' name='meal[name]' value="" />
-          Description: <input style="width: 540px" type='text' name='meal[description]' value="" />
-          Price: <input style="width: 540px" type='text' name='meal[price]' value="" />
-          <input style="width: 25%; float: left; margin-left: 15px" type="submit" name="add_item" class="button" id="submit_btn" value="Add New Item"/>
+        <form action='/add_item' method='POST'>
+          Meal:
+          <input style="width: 540px" type='text' name='meal[meal]' value="" />
+          Course:
+          <input style="width: 540px" type='text' name='meal[course]' value="" />
+          Meal Order:
+          <input style="width: 540px" type='text' name='meal[meal_order]' value="" />
+          Name:
+          <input style="width: 540px" type='text' name='meal[name]' value="" />
+          Description:
+          <input style="width: 540px" type='text' name='meal[description]' value="" />
+          Price:
+          <input style="width: 540px" type='text' name='meal[price]' value="" />
+
+          <input style="width: 25%; float: left; margin-left: 15px" type="submit" class="button" id="submit_btn" value="Add New Item"/>
+          <input type="hidden" name="_method" value="PUT"/>
         </form>
       </div>
     </div><!-- /.modal-content -->
