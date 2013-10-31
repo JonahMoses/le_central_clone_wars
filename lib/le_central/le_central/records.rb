@@ -8,12 +8,11 @@ module LeCentral
   class Records
 
     def self.database
-      if ENV['RACK_ENV'] == 'test'
-        @database ||= Sequel.connect("postgres://jonahmoses@localhost/le_central_test")
-      elsif ENV['RACK_ENV'] == 'development'
-        @database ||= Sequel.connect(:host=>'localhost', :user=>ENV["DB_USER"], :database=>'le_central_development')
-      else
+      if ENV["DATABASE_URL"]
         @database ||= Sequel.connect(ENV["DATABASE_URL"])
+      else
+        # @database ||= Sequel.connect(:host=>'localhost', :user=>ENV["DB_USER"], :database=>'le_central_development')
+        @database ||= Sequel.sqlite('lib/le_central/db/database.sqlite3')
       end
     end
 
@@ -21,12 +20,12 @@ module LeCentral
       database.create_table? :menu_items do
         primary_key :id
         Integer     :active
-        Text      :meal
-        Text      :course
+        Text        :meal
+        Text        :course
         Integer     :meal_order
-        Text      :name
-        Text      :description
-        Text      :price
+        Text        :name
+        Text        :description
+        Text        :price
         DateTime    :created_at
         DateTime    :updated_at
       end

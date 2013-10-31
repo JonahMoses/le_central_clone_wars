@@ -14,7 +14,7 @@ class MenuItemTest < Minitest::Test
       :active       => 1,
       :meal         => "Dinner",
       :course       => "Appetizer",
-      :menu_order   => 10,
+      :meal_order   => 10,
       :name         => "Frog Legz",
       :description  => "Cooked in lots and lots of butter.",
       :price        => "9",
