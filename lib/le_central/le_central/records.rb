@@ -10,7 +10,7 @@ module LeCentral
     def self.database
       if ENV["DATABASE_URL"]
         @database ||= Sequel.connect(ENV["DATABASE_URL"])
-      elsif ENV["RACK_ENV"] == "test"
+      elsif ENV['RACK_ENV'] == 'test'
         @database ||= Sequel.sqlite('lib/le_central/db/test_database.sqlite3')
       else
         @database ||= Sequel.sqlite('lib/le_central/db/database.sqlite3')
